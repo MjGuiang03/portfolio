@@ -15,16 +15,18 @@ export function About() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="w-full md:w-1/3 aspect-square rounded-2xl bg-foreground/[0.03] border border-foreground/10 flex items-center justify-center relative overflow-hidden group"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-foreground/10 to-transparent opacity-50 z-0" />
-            <Image 
-              src="/profile.png" 
-              alt="Marc Joefreal Guiang" 
-              fill
-              className="object-cover z-10 scale-100 group-hover:scale-105 transition-transform duration-500"
-              priority
-            />
+          className="w-48 h-48 sm:w-64 sm:h-64 md:w-full md:aspect-square md:h-auto rounded-2xl bg-foreground/[0.03] border border-foreground/10 flex items-center justify-center relative overflow-hidden group"
+          style={{ aspectRatio: '1' }}
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-foreground/10 to-transparent opacity-50 z-0" />
+          <Image
+            src="/profile.png"
+            alt="Marc Joefreal Guiang"
+            fill
+            sizes="(max-width: 768px) 256px, 33vw"
+            className="object-cover z-10 scale-100 group-hover:scale-105 transition-transform duration-500"
+            priority
+          />
           </motion.div>
 
           {/* Info Details */}

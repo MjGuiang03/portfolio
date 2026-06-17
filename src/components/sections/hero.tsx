@@ -19,7 +19,7 @@ export function Hero() {
           Full Stack Developer
         </motion.div>
         
-        <div className="text-5xl md:text-7xl font-bold tracking-tighter flex flex-col items-center">
+        <div className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter flex flex-col items-center">
           <AnimatedText text="Crafting digital" className="justify-center" delay={0.2} />
           <AnimatedText text="experiences that matter." className="justify-center text-foreground/60" delay={0.6} />
         </div>
@@ -28,7 +28,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="text-lg md:text-xl text-foreground/60 max-w-2xl"
+          className="text-base sm:text-lg md:text-xl text-foreground/60 max-w-2xl px-2"
         >
           I am a passionate software engineer specializing in React, Next.js, and modern web aesthetics. Building robust solutions with a focus on design and performance.
         </motion.p>
@@ -37,12 +37,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 pt-4"
+          className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto"
         >
-          <a href="#features" className="px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+          <a href="#features" className="px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] text-center">
             Explore Features
           </a>
-          <a href="mailto:marcjoefreal@gmail.com" className="px-8 py-3 bg-transparent border border-foreground/20 text-foreground font-semibold rounded-lg hover:bg-foreground/10 transition-colors">
+          <a href="mailto:marcjoefreal@gmail.com" className="px-8 py-3 bg-transparent border border-foreground/20 text-foreground font-semibold rounded-lg hover:bg-foreground/10 transition-colors text-center">
             Get In Touch
           </a>
         </motion.div>

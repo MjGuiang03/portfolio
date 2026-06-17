@@ -15,26 +15,31 @@ import {
   SiGit
 } from "react-icons/si";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const technologies = [
-  { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "" }, // Will adapt based on theme
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "Express", icon: SiExpress, color: "" }, // Will adapt
-  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "Framer Motion", icon: SiFramer, color: "#0055FF" },
-  { name: "JWT", icon: SiJsonwebtokens, color: "#000000" }, // Will adapt
-  { name: "Git", icon: SiGit, color: "#F05032" }
+  { name: "React", icon: SiReact, color: "#61DAFB", darkColor: "#61DAFB" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#000000", darkColor: "#FFFFFF" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6", darkColor: "#3178C6" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933", darkColor: "#339933" },
+  { name: "Express", icon: SiExpress, color: "#000000", darkColor: "#FFFFFF" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248", darkColor: "#47A248" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", darkColor: "#4169E1" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", darkColor: "#06B6D4" },
+  { name: "Framer Motion", icon: SiFramer, color: "#0055FF", darkColor: "#0055FF" },
+  { name: "JWT", icon: SiJsonwebtokens, color: "#000000", darkColor: "#FFFFFF" },
+  { name: "Git", icon: SiGit, color: "#F05032", darkColor: "#F05032" },
 ];
 
-// Duplicate for infinite scroll effect
 const duplicatedTech = [...technologies, ...technologies, ...technologies];
 
 export function TechStack() {
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section className="py-12 bg-background border-y border-foreground/5 overflow-hidden flex flex-col items-center">
@@ -52,13 +57,9 @@ export function TechStack() {
             className="flex flex-nowrap gap-6"
           >
             {duplicatedTech.map((tech, idx) => {
-              // Handle icons that should invert in dark mode (black logos)
-              let finalColor = tech.color;
-              if ((tech.name === "Next.js" || tech.name === "Express" || tech.name === "JWT") && theme === "dark") {
-                finalColor = "#FFFFFF";
-              } else if ((tech.name === "Next.js" || tech.name === "Express" || tech.name === "JWT") && theme !== "dark") {
-                finalColor = "#000000";
-              }
+              const finalColor = mounted
+                ? theme === "dark" ? tech.darkColor : tech.color
+                : tech.color;
 
               return (
                 <div

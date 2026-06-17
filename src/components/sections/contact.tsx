@@ -10,9 +10,9 @@ export function Contact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-bold tracking-tighter mb-8"
+          className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter mb-8"
         >
-          Let's build something <br className="hidden md:block"/> extraordinary.
+          Let's build something extraordinary.
         </motion.h2>
         
         <motion.p 
@@ -20,7 +20,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-xl text-foreground/60 mb-12 max-w-2xl mx-auto"
+          className="text-base sm:text-lg md:text-xl text-foreground/60 mb-12 max-w-2xl mx-auto px-2"
         >
           I'm currently open for new opportunities. Whether you have a project in mind or just want to say hi, I'll try my best to get back to you!
         </motion.p>
@@ -31,7 +31,7 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <a href="mailto:hello@example.com" className="inline-block px-10 py-4 bg-foreground text-background font-bold text-lg rounded-full hover:bg-foreground/90 transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+          <a href="mailto:marcjoefreal@gmail.com" className="inline-block px-10 py-4 bg-foreground text-background font-bold text-lg rounded-full hover:bg-foreground/90 transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
             Say Hello
           </a>
         </motion.div>
