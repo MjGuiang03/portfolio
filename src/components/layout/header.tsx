@@ -57,6 +57,7 @@ export function Header() {
           <a
             href="/Marc_Joefreal_Guiang_CV.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             download="Marc_Joefreal_Guiang_CV.pdf"
             className="hidden sm:flex items-center gap-2 px-4 py-2 bg-foreground text-background font-semibold text-sm rounded-full hover:bg-foreground/90 transition-transform active:scale-95"
           >
@@ -97,6 +98,7 @@ export function Header() {
             <a
               href="/Marc_Joefreal_Guiang_CV.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               download="Marc_Joefreal_Guiang_CV.pdf"
               className="flex items-center gap-2 px-5 py-3 bg-foreground text-background font-semibold text-sm rounded-full w-fit"
             >

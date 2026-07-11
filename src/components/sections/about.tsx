@@ -11,22 +11,21 @@ export function About() {
         <div className="flex flex-col md:flex-row gap-16 items-center">
 
           {/* Avatar / Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-          className="w-48 h-48 sm:w-64 sm:h-64 md:w-full md:aspect-square md:h-auto rounded-2xl bg-foreground/[0.03] border border-foreground/10 flex items-center justify-center relative overflow-hidden group"
-          style={{ aspectRatio: '1' }}
-        >
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-foreground/10 to-transparent opacity-50 z-0" />
-          <Image
-            src="/profile.png"
-            alt="Marc Joefreal Guiang"
-            fill
-            sizes="(max-width: 768px) 256px, 33vw"
-            className="object-cover z-10 scale-100 group-hover:scale-105 transition-transform duration-500"
-            priority
-          />
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-full md:aspect-square md:h-auto rounded-2xl bg-white dark:bg-foreground/[0.03] border border-foreground/10 flex items-center justify-center relative overflow-hidden"
+            style={{ aspectRatio: '1' }}
+          >
+            <Image
+              src="/profile.png"
+              alt="Marc Joefreal Guiang"
+              fill
+              sizes="(max-width: 768px) 256px, 33vw"
+              className="object-contain z-10"
+              priority
+            />
           </motion.div>
 
           {/* Info Details */}
@@ -48,10 +47,10 @@ export function About() {
               className="space-y-6 text-lg text-foreground/70 leading-relaxed"
             >
               <p>
-                I am a dedicated Full Stack Developer with a strong foundation in building modern, scalable web applications. My journey in tech is driven by a passion for solving complex problems and designing seamless user experiences.
+                Hey! I'm an Information Technology student with a deep love for building things on the web. I got hooked on coding when I realized I could take an idea from a sketch on paper to a fully working app — and I've been chasing that feeling ever since.
               </p>
               <p>
-                From architecting databases to perfecting front-end micro-animations, I enjoy taking ownership of the entire development lifecycle. I believe in clean code, continuous learning, and building products that actually make an impact.
+                I'm the kind of developer who obsesses over the little things — pixel-perfect layouts, smooth animations, and writing code that actually makes sense when you come back to it months later. I'm still learning every day, and honestly, that's the part I enjoy the most.
               </p>
             </motion.div>
 
@@ -61,37 +60,30 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4"
+              className="mt-10 flex flex-col gap-4 w-fit mx-auto md:mx-0"
             >
-              <div className="flex items-center gap-3 p-4 rounded-xl bg-foreground/[0.02] border border-foreground/10">
-                <User className="w-5 h-5 text-foreground/50" />
+              <div className="flex items-center gap-3 p-4 rounded-xl bg-foreground/[0.02] border border-foreground/10 overflow-hidden">
+                <User className="w-5 h-5 text-foreground/50 flex-shrink-0" />
                 <div className="flex flex-col">
                   <span className="text-foreground/50 text-xs uppercase tracking-wider">Name</span>
-                  <span className="text-foreground/90 font-medium">Marc Joefreal A. Guiang</span>
+                  <span className="text-foreground/90 font-medium whitespace-nowrap text-sm xl:text-base">Marc Joefreal A. Guiang</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 rounded-xl bg-foreground/[0.02] border border-foreground/10">
-                <Calendar className="w-5 h-5 text-foreground/50" />
-                <div className="flex flex-col">
-                  <span className="text-foreground/50 text-xs uppercase tracking-wider">Age</span>
-                  <span className="text-foreground/90 font-medium">21</span>
-                </div>
-              </div>
 
-              <div className="flex items-center gap-3 p-4 rounded-xl bg-foreground/[0.02] border border-foreground/10">
-                <Mail className="w-5 h-5 text-foreground/50" />
+              <div className="flex items-center gap-3 p-4 rounded-xl bg-foreground/[0.02] border border-foreground/10 overflow-hidden">
+                <Mail className="w-5 h-5 text-foreground/50 flex-shrink-0" />
                 <div className="flex flex-col">
                   <span className="text-foreground/50 text-xs uppercase tracking-wider">Email</span>
-                  <span className="text-foreground/90 font-medium">marcjoefreal@gmail.com</span>
+                  <span className="text-foreground/90 font-medium whitespace-nowrap text-sm xl:text-base">marcjoefreal@gmail.com</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 rounded-xl bg-foreground/[0.02] border border-foreground/10">
-                <MapPin className="w-5 h-5 text-foreground/50" />
+              <div className="flex items-center gap-3 p-4 rounded-xl bg-foreground/[0.02] border border-foreground/10 overflow-hidden">
+                <MapPin className="w-5 h-5 text-foreground/50 flex-shrink-0" />
                 <div className="flex flex-col">
                   <span className="text-foreground/50 text-xs uppercase tracking-wider">Location</span>
-                  <span className="text-foreground/90 font-medium">Paranaque City, Philippines</span>
+                  <span className="text-foreground/90 font-medium whitespace-nowrap text-sm xl:text-base">Paranaque City, Philippines</span>
                 </div>
               </div>
             </motion.div>

@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Marc Joefreal Guiang | Full Stack Developer",
   description: "Portfolio of Marc Joefreal Guiang, a Full Stack Developer specializing in React, Next.js, and Node.js.",
+  icons: {
+    icon: "/profile.png",
+  },
 };
 
 export default function RootLayout({

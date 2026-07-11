@@ -41,16 +41,16 @@ function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2026;
   
   return (
     <footer className="py-12 bg-background border-t border-foreground/10 text-center px-4">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         <div className="flex items-center gap-6 mb-8">
-          <a href="https://github.com/MjGuiang03" target="_blank" rel="noreferrer" className="p-3 bg-foreground/[0.03] border border-foreground/10 rounded-full hover:bg-foreground/[0.1] hover:scale-110 transition-all text-foreground/70 hover:text-foreground">
+          <a href="https://github.com/MjGuiang03" target="_blank" rel="noopener noreferrer" className="p-3 bg-foreground/[0.03] border border-foreground/10 rounded-full hover:bg-foreground/[0.1] hover:scale-110 transition-all text-foreground/70 hover:text-foreground">
             <GithubIcon className="w-5 h-5" />
           </a>
-          <a href="https://linkedin.com/in/marc-joefreal-guiang" target="_blank" rel="noreferrer" className="p-3 bg-foreground/[0.03] border border-foreground/10 rounded-full hover:bg-foreground/[0.1] hover:scale-110 transition-all text-foreground/70 hover:text-foreground">
+          <a href="https://linkedin.com/in/marc-joefreal-guiang" target="_blank" rel="noopener noreferrer" className="p-3 bg-foreground/[0.03] border border-foreground/10 rounded-full hover:bg-foreground/[0.1] hover:scale-110 transition-all text-foreground/70 hover:text-foreground">
             <LinkedinIcon className="w-5 h-5" />
           </a>
           <a href="mailto:marcjoefreal@gmail.com" className="p-3 bg-foreground/[0.03] border border-foreground/10 rounded-full hover:bg-foreground/[0.1] hover:scale-110 transition-all text-foreground/70 hover:text-foreground">

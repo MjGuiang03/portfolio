@@ -6,22 +6,22 @@ import { Server, Layout, Database, Zap } from "lucide-react";
 const features = [
   {
     title: "Frontend Engineering",
-    description: "Building responsive, accessible, and highly interactive user interfaces using React, Next.js, and Tailwind CSS.",
+    description: "Building responsive, interactive interfaces with React, Next.js, and Tailwind CSS — focused on clean layouts, smooth interactions, and great user experience across devices.",
     icon: Layout,
   },
   {
     title: "Backend Architecture",
-    description: "Designing scalable RESTful APIs and serverless functions with Node.js and Next.js App Router.",
+    description: "Designing well-structured RESTful APIs with Node.js and Express — clean routing, proper validation, and reliable error handling that keeps things running smoothly.",
     icon: Server,
   },
   {
-    title: "Database Management",
-    description: "Experienced with designing schemas, managing data relations, and optimizing database performance.",
+    title: "Database Design",
+    description: "Structuring schemas in MongoDB and managing relational data with PostgreSQL and Prisma — keeping the data layer organized, efficient, and ready to scale.",
     icon: Database,
   },
   {
-    title: "Performance Optimization",
-    description: "Ensuring lightning-fast load times and smooth micro-animations using Framer Motion and optimized assets.",
+    title: "Performance & Polish",
+    description: "Optimizing load times, implementing smooth Framer Motion animations, and adding the finishing touches that take a project from functional to refined.",
     icon: Zap,
   },
 ];
@@ -38,7 +38,7 @@ export function Features() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold tracking-tight mb-4"
           >
-            Core Capabilities
+            What I Bring to the Table
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export function Features() {
             transition={{ delay: 0.1 }}
             className="text-foreground/60 max-w-2xl mx-auto text-lg"
           >
-            Delivering robust, end-to-end solutions by combining elegant minimalist design with powerful backend systems.
+            I like to work across the entire stack — from designing clean interfaces to building the APIs that power them.
           </motion.p>
         </div>
 

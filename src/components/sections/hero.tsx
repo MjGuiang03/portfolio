@@ -24,14 +24,14 @@ export function Hero() {
           <AnimatedText text="experiences that matter." className="justify-center text-foreground/60" delay={0.6} />
         </div>
         
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-          className="text-base sm:text-lg md:text-xl text-foreground/60 max-w-2xl px-2"
-        >
-          I am a passionate software engineer specializing in React, Next.js, and modern web aesthetics. Building robust solutions with a focus on design and performance.
-        </motion.p>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+            className="text-base sm:text-lg md:text-xl text-foreground/60 max-w-2xl px-2"
+          >
+            A BSIT student who loves turning ideas into real, working products — from clean UI to solid backends. Currently building with React, Next.js, and a whole lot of curiosity.
+          </motion.p>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ export function Hero() {
           <a href="#features" className="px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] text-center">
             Explore Features
           </a>
-          <a href="mailto:marcjoefreal@gmail.com" className="px-8 py-3 bg-transparent border border-foreground/20 text-foreground font-semibold rounded-lg hover:bg-foreground/10 transition-colors text-center">
+          <a href="#contact" className="px-8 py-3 bg-transparent border border-foreground/20 text-foreground font-semibold rounded-lg hover:bg-foreground/10 transition-colors text-center">
             Get In Touch
           </a>
         </motion.div>
