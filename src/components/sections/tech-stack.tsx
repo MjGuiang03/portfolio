@@ -42,7 +42,7 @@ export function TechStack() {
   }, []);
 
   return (
-    <section className="py-12 bg-background border-y border-foreground/5 overflow-hidden flex flex-col items-center">
+    <section id="tech-stack" className="py-12 bg-background border-y border-foreground/5 overflow-hidden flex flex-col items-center">
       <p className="text-foreground/40 text-sm tracking-widest uppercase mb-8">Technologies & Tools</p>
 
       <div className="relative w-full max-w-7xl mx-auto px-4">

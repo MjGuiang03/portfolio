@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div className="bg-background selection:bg-foreground/30 selection:text-foreground">
       <Hero />
-      <TechStack />
       <About />
+      <TechStack />
       <Features />
       <Projects />
       <Contact />

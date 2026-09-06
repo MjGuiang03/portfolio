@@ -58,36 +58,31 @@ const infoItems = [
   },
 ];
 
-const socials = [
-  {
-    label: "GitHub",
-    href: "https://github.com/MjGuiang03",
-    Icon: GithubIcon,
-  },
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/marc-joefreal-guiang",
-    Icon: LinkedinIcon,
-  },
-  {
-    label: "Email",
-    href: "mailto:marcjoefreal@gmail.com",
-    Icon: Mail,
-  },
-];
 
 export function About() {
   return (
     <section id="about" className="py-24 bg-background text-foreground px-4 border-t border-foreground/10">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-16 items-center">
+
+        {/* Title — top center */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold tracking-tight mb-12 text-center"
+        >
+          Behind the Code
+        </motion.h2>
+
+        {/* Image + Text row */}
+        <div className="flex flex-col md:flex-row gap-12 items-start">
 
           {/* Avatar / Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-full md:aspect-square md:h-auto rounded-2xl bg-white dark:bg-foreground/[0.03] border border-foreground/10 flex items-center justify-center relative overflow-hidden"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-1/3 md:aspect-square md:h-auto rounded-2xl bg-white dark:bg-foreground/[0.03] border border-foreground/10 flex items-center justify-center relative overflow-hidden flex-shrink-0"
             style={{ aspectRatio: "1" }}
           >
             <Image
@@ -101,16 +96,7 @@ export function About() {
           </motion.div>
 
           {/* Info Details */}
-          <div className="w-full md:w-2/3">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
-            >
-              Behind the Code
-            </motion.h2>
-
+          <div className="flex-1">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -132,47 +118,19 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="mt-10 flex flex-wrap gap-3"
+              className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 py-6 border-y border-foreground/10"
             >
               {infoItems.map(({ icon: Icon, label, value }) => (
-                <div
-                  key={label}
-                  className="group relative flex flex-col gap-2 p-4 rounded-2xl bg-foreground/[0.02] border border-foreground/[0.08] hover:border-foreground/20 hover:bg-foreground/[0.05] transition-all duration-300 min-w-[180px] flex-1"
-                >
-                  {/* Subtle glow accent */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"
-                    style={{ background: "radial-gradient(circle at 50% 0%, rgba(255,255,255,0.04) 0%, transparent 70%)" }}
-                  />
-                  <div className="flex items-center gap-2 text-foreground/40">
-                    <Icon className="w-3.5 h-3.5" />
-                    <span className="text-[10px] uppercase tracking-widest font-semibold">{label}</span>
+                <div key={label} className="flex flex-col gap-1.5">
+                  <div className="flex items-center gap-2 text-foreground/50">
+                    <Icon className="w-4 h-4" />
+                    <span className="text-xs uppercase tracking-wider font-semibold">{label}</span>
                   </div>
-                  <p className="text-foreground/90 font-medium text-sm leading-snug">{value}</p>
+                  <p className="text-foreground/90 font-medium text-sm">{value}</p>
                 </div>
               ))}
             </motion.div>
 
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="mt-4 flex items-center gap-2 flex-wrap"
-            >
-              {socials.map(({ label, href, Icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith("mailto") ? undefined : "_blank"}
-                  rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full border border-foreground/10 bg-foreground/[0.03] hover:bg-foreground/[0.08] hover:border-foreground/20 hover:scale-105 transition-all duration-200 text-foreground/55 hover:text-foreground text-xs font-medium tracking-wide"
-                >
-                  <Icon className="w-3.5 h-3.5" />
-                  <span>{label}</span>
-                </a>
-              ))}
-            </motion.div>
           </div>
 
         </div>

@@ -38,9 +38,7 @@ export default async function ProjectPage({
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero */}
       <section className="relative pt-24 pb-20 px-4 overflow-hidden border-b border-foreground/10">
-        <div
-          className={`absolute inset-0 bg-gradient-to-br ${project.gradient} pointer-events-none`}
-        />
+
         <div className="relative max-w-5xl mx-auto">
           <Link
             href="/#projects"

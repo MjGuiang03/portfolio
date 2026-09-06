@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SectionIndicator } from "@/components/ui/section-indicator";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +43,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="flex-grow">{children}</main>
+          <SectionIndicator />
+          <main className="flex-grow max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 overflow-hidden">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

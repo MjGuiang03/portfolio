@@ -18,33 +18,20 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[360px]">
+      <div className="flex flex-col gap-4">
         {images.map((img, idx) => (
           <div
             key={idx}
-            className={`rounded-3xl overflow-hidden relative border border-foreground/10 shadow-xl h-64 md:h-full group cursor-pointer ${
-              idx === 2 ? "bg-white flex flex-col items-center" : "bg-foreground/[0.03]"
-            }`}
+            className="rounded-3xl overflow-hidden relative border border-foreground/10 shadow-xl w-full aspect-video group cursor-pointer bg-foreground/[0.03]"
             onClick={() => setSelectedImage(img)}
           >
-            {idx === 2 ? (
-              <div className="relative w-[85%] h-full">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
-                />
-              </div>
-            ) : (
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
-                priority={idx === 0}
-              />
-            )}
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
+              priority={idx === 0}
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
             <span className="absolute bottom-4 left-4 text-white text-xs font-bold tracking-widest uppercase pointer-events-none">
               {img.alt}
