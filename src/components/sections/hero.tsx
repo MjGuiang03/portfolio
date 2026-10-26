@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col items-center justify-center min-h-[calc(100dvh)] px-6 sm:px-10 text-center overflow-hidden bg-background"
+      className="relative flex flex-col items-center justify-center min-h-[100svh] py-24 px-6 sm:px-10 text-center overflow-hidden bg-background"
     >
 
       {/* Main content */}
